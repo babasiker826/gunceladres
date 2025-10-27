@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/sorgu/([0-9]+)$ api/sorgu.php?tc=$1 [L,QSA]
+
+# CORS headers
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type"
+
+# JSON header
+<Files "*.php">
+    Header set Content-Type "application/json; charset=utf-8"
+</Files>
