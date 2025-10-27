@@ -1,0 +1,14 @@
+{
+    "name": "kahinorg/guncel-adres-api",
+    "description": "TC Kimlik ile Güncel Adres Sorgulama API",
+    "type": "project",
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "authors": [
+        {
+            "name": "NabiSystem",
+            "email": "herkesmutluolmali"
+        }
+    ]
+}
