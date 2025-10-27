@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: kahin-adres-api
+    env: php
+    plan: free
+    buildCommand: |
+      echo "PHP build started..."
+      composer install --no-dev --optimize-autoloader
+    startCommand: php -S 0.0.0.0:$PORT index.php
+    envVars:
+      - key: PHP_VERSION
+        value: 8.1.0
